@@ -1,0 +1,37 @@
+.mt-hscroll-wrapper{margin:0; padding:0; overflow:hidden; direction:rtl}
+.mt-hscroll-container{
+	position:relative; width:100%; overflow:hidden; white-space:nowrap; scroll-behavior: smooth;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	-webkit-overflow-style: none;
+	-moz-overflow-style: none;
+	-ms-overflow-style: none;
+	-o-overflow-style: none;
+	scrollbar-width: none;
+}
+.mt-hscroll-container.scrolling,
+.mt-hscroll-container.scrolling .mt-hscroll-item{
+	cursor: grabbing;
+	cursor: -webkit-grabbing;	
+}
+.mt-hscroll-item{display:inline-block; background:rgba(0,0,0,0.2); min-height:250px; min-width:400px; margin:16px; cursor:pointer;}
+.mt-hscroll-scrollbar{position:relative; width:calc(100% - 32px); margin:0 16px; display:table; height:2px; background:rgba(0,0,0,0.1);}
+.mt-hscroll-scrollbar-handler{
+	position:absolute; top:0; right:0; width:0; height:inherit; border-radius:1px; background:rgba(0,0,0,0.3);
+	-webkit-transition:right ease-out 0.35s;
+	-moz-transition:right ease-out 0.35s;
+	-ms-transition:right ease-out 0.35s;
+	-o-transition:right ease-out 0.35s;
+	transition:right ease-out 0.35s;
+}
+.mt-hscroll-scrollbar-handler.ltr{
+	right:auto; left:0;
+	-webkit-transition:left ease-out 0.35s;
+	-moz-transition:left ease-out 0.35s;
+	-ms-transition:left ease-out 0.35s;
+	-o-transition:left ease-out 0.35s;
+	transition:left ease-out 0.35s;
+}
